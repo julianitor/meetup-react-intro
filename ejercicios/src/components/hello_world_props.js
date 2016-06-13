@@ -19,7 +19,7 @@ class HelloWorldProps extends Component {
       </div>
     )
   }
-};
+}
 
 HelloWorldProps.propTypes = {
   name: React.PropTypes.string.isRequired
