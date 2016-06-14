@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
 const buttonStyle = {
   fontFamily: 'Geneva, sans-serif',
@@ -12,17 +12,20 @@ const buttonStyle = {
 class Counter extends Component {
   constructor(){
     super()
-    //TODO - definir estado inicial
+    this.state = {count: 0}
+    //bind handler
   }
+  //set handler
   render(){
+    //set button event
     return (
       <div>
         <h1>Contador</h1>
         <button style={ buttonStyle }>Haz click aquí</button>
-        <p>Has hecho click X veces</p>
+        <p>Has hecho click {this.state.count} veces</p>
       </div>
     )
   }
 }
 
-export default Counter;
+export default Counter

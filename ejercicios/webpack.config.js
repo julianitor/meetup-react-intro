@@ -3,7 +3,7 @@ var path = require('path'),
 
 var outPath = path.join(__dirname, 'dist');
 var IS_DEV = (process.env.NODE_ENV === 'development');
-console.log('Webpack config. Environment: ', (IS_DEV ? 'dev' : 'production'));
+console.log('Webpack config. Environment: ', (IS_DEV ? 'dev' : 'solution'));
 
 var devConfig = {
   entry: [
@@ -24,9 +24,9 @@ var devConfig = {
   }
 };
 
-var prodConfig = {
+var solutionConfig = {
   entry: [
-    './src/app.js'
+    './src_soluciones/app.js'
   ],
   output: {
     path: outPath,
@@ -37,11 +37,10 @@ var prodConfig = {
       {
         test: /\.js*/,
         include: path.join(__dirname, 'src'),
-        //REMOVE react-hot for production build
-        loaders: ['babel']
+        loaders: ['react-hot', 'babel']
       }
     ]
   }
-}
+};
 
-module.exports = IS_DEV ? devConfig : prodConfig;
+module.exports = IS_DEV ? devConfig : solutionConfig;

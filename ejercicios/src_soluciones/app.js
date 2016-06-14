@@ -7,5 +7,5 @@ import FechasMundo from './components/fechas_mundo.jsx'
 import ChangeColor from './components/change_color.jsx'
 
 window.onload = function(){
-  ReactDOM.render(<HelloWorld /> , document.getElementById('app'))
+  ReactDOM.render(<Counter /> , document.getElementById('app'))
 }

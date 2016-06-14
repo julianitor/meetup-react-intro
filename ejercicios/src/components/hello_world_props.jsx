@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
 const nameStyle = {
   fontFamily: 'Helvetica, Geneva, sans-serif',
@@ -8,10 +8,10 @@ const nameStyle = {
   padding: '6px 4px',
   fontWeight: 'bold',
   borderRadius: 8
-};
+}
 
 class HelloWorldProps extends Component {
-  render(){
+  render() {
     return (
       <div>
         <h1>Hola Mundo con propiedades</h1>
@@ -25,4 +25,8 @@ HelloWorldProps.propTypes = {
   name: React.PropTypes.string.isRequired
 }
 
-export default HelloWorldProps;
+HelloWorldProps.defaultProps = {
+  name: 'Homer J. Simpson'
+}
+
+export default HelloWorldProps
