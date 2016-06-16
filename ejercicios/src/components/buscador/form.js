@@ -20,41 +20,24 @@ class Form extends Component {
 
   handleTextChange(e){
     this.notifyChange({
-      [e.target.id]: e.target.value
+      //TODO: pasar nombre del campo y valor
     })
   }
 
   handleAliveChange(e){
-    //TODO
-    this.notifyChange({ aliveOnly: !!e.target.checked });
+    //TODO: pasar el valor del checkbox
   }
 
   handleSeasonChange(e){
-    //TODO
-    const season = parseInt(e.target.value);
-    const currentSeasons = this.props.filter.seasons;
-    const newSeasons = e.target.checked ?
-      currentSeasons.concat([season]) :
-      currentSeasons.filter(x => x!== season);
-
-    this.notifyChange({ seasons: newSeasons.sort() });
+    //TODO: pasar las temporadas seleccionadas
   }
 
   renderSeasons(allSeasons, currentSeasons){
-    return allSeasons.map(s => {
-      const isChecked = currentSeasons.includes(s);
-      return (
-        <SeasonItem
-          key={ s }
-          season={ s }
-          isChecked={ isChecked }
-          onChange={ this.handleSeasonChange } />
-      )
-    });
+    //TODO: devolver una lista de componentes SeasonItem
   }
 
   renderFamilies(families){
-    return families.map(f => <option key={ f } value={ f }>{ f }</option>)
+    //TODO: devolver una lista de <option> para las familias
   }
 
   render(){

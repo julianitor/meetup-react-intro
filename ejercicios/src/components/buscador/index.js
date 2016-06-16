@@ -25,27 +25,13 @@ function search(characters, filter){
 class Buscador  extends Component {
   constructor(props){
     super(props);
-    this.handleQueryChange = this.handleQueryChange.bind(this);
-    this.state = {
-      characters: characters,
-      familyNames: families.sort(),
-      allSeasons: seasons.sort(),
-      filter: {
-        name: '',
-        family: '',
-        aliveOnly: false,
-        seasons: []
-      }
-    }
+    //TODO: init state and handlers
   }
 
   handleQueryChange(changes){
     const currentFilter = this.state.filter;
     const newFilter = Object.assign({}, currentFilter, changes);
     //TODO: actualizar el filtro en el state del componente
-    this.setState({
-      filter: newFilter
-    });
   }
 
   render(){
