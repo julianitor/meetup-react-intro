@@ -5,7 +5,7 @@ class CharacterList extends Component {
   render(){
     const { items } = this.props;
     //TODO - generar los componentes ResultsItem
-    const characters = items.map(c => <Character key={ c.name } item={ c } />)
+    //const characters = ...
 
     return (
       <div className="search-results">
