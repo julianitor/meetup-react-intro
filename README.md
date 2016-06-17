@@ -6,7 +6,7 @@ Slides at [Slides.com](http://slides.com/julianitor/deck/fullscreen)
 
 Move to "ejercicios" folder to see code working:
 
-`cd ejercicios()`
+`cd ejercicios`
 
 To install dependencies:
 
